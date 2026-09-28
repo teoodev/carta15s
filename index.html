@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Princesa Valerie Vergara Agudelo 👑</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PANTALLA DE INICIO -->
+    <section class="welcome" id="welcome">
+
+        <div class="welcome-content">
+
+            <div class="crown">♕</div>
+
+            <p class="small-title">UNA INVITACIÓN MUY ESPECIAL</p>
+
+            <h1>Princesa<br><span>Valery</span></h1>
+
+            <p class="welcome-text">
+                Estás cordialmente invitado a celebrar
+                un día lleno de magia.
+            </p>
+
+            <button class="enter-btn" id="enterBtn">
+                <span>✨</span>
+                Abrir invitación
+                <span>✨</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="mainContent" class="hidden">
+
+        <!-- VIDEO HERO -->
+        <section class="hero">
+
+            <video
+                id="heroVideo"
+                class="hero-video"
+                autoplay
+                muted
+                loop
+                playsinline
+            >
+                <source src="assets/video.mp4" type="video/mp4">
+                Tu navegador no soporta video.
+            </video>
+
+            <div class="video-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="hero-subtitle">
+                    UNA CELEBRACIÓN DE CUENTO DE HADAS
+                </p>
+
+                <h1>Princesa Valery</h1>
+
+                <div class="ornament">✦</div>
+
+                <p class="hero-date">
+                    Mi día especial
+                </p>
+
+            </div>
+
+            <div class="scroll-indicator">
+                <span>Desliza</span>
+                <div class="arrow">↓</div>
+            </div>
+
+        </section>
+
+
+        <!-- PRESENTACIÓN -->
+        <section class="section presentation">
+
+            <div class="ornament-top">❦</div>
+
+            <p class="eyebrow">CON MUCHO AMOR</p>
+
+            <h2>
+                Quiero compartir<br>
+                <span>este momento contigo</span>
+            </h2>
+
+            <p class="description">
+                Hay momentos que se convierten en recuerdos
+                para toda la vida. Por eso quiero que seas parte
+                de este día tan especial.
+            </p>
+
+            <div class="crown-decoration">♕</div>
+
+        </section>
+
+
+        <!-- FECHA -->
+        <section class="section date-section">
+
+            <p class="eyebrow">RESERVA ESTA FECHA</p>
+
+            <h2>Mi gran día</h2>
+
+            <div class="date-card">
+
+                <div class="date-day">
+                    15
+                </div>
+
+                <div class="date-info">
+                    <span>SEPTIEMBRE</span>
+                    <strong>2026</strong>
+                </div>
+
+            </div>
+
+            <p class="time">
+                🕐 6:00 PM
+            </p>
+
+        </section>
+
+
+        <!-- CUENTA REGRESIVA -->
+        <section class="section countdown-section">
+
+            <p class="eyebrow">FALTA MUY POQUITO</p>
+
+            <h2>Cuenta regresiva</h2>
+
+            <div class="countdown">
+
+                <div>
+                    <strong id="days">00</strong>
+                    <span>DÍAS</span>
+                </div>
+
+                <div>
+                    <strong id="hours">00</strong>
+                    <span>HORAS</span>
+                </div>
+
+                <div>
+                    <strong id="minutes">00</strong>
+                    <span>MINUTOS</span>
+                </div>
+
+                <div>
+                    <strong id="seconds">00</strong>
+                    <span>SEGUNDOS</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- UBICACIÓN -->
+        <section class="section location-section">
+
+            <div class="location-icon">⌖</div>
+
+            <p class="eyebrow">NOS ENCONTRAREMOS EN</p>
+
+            <h2>El lugar de la celebración</h2>
+
+            <p class="description">
+                Aquí aparecerá la dirección del evento.
+            </p>
+
+            <a
+                href="https://maps.google.com"
+                target="_blank"
+                class="location-btn"
+            >
+                Ver ubicación
+            </a>
+
+        </section>
+
+
+        <!-- CONFIRMACIÓN -->
+        <section class="section confirmation">
+
+            <div class="crown">♕</div>
+
+            <p class="eyebrow">TU PRESENCIA ES MUY IMPORTANTE</p>
+
+            <h2>
+                ¿Nos acompañas?
+            </h2>
+
+            <p class="description">
+                Confirma tu asistencia para compartir
+                juntos este momento tan especial.
+            </p>
+
+            <a
+                href="https://wa.me/573000000000?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20a%20la%20celebración%20de%20la%20Princesa%20Valery."
+                target="_blank"
+                class="whatsapp-btn"
+            >
+                Confirmar asistencia
+            </a>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <div class="footer-crown">♕</div>
+
+            <h3>Princesa Valery</h3>
+
+            <p>
+                Un día mágico, un recuerdo para siempre.
+            </p>
+
+            <span>♡</span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- BOTÓN DE MÚSICA -->
+    <button id="musicBtn" class="music-btn hidden">
+        ♪
+    </button>
+
+    <audio id="backgroundMusic" loop>
+        <source src="assets/musica.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

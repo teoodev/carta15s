@@ -1,0 +1,576 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold: #c9a45c;
+    --gold-light: #e8cf91;
+    --dark: #171318;
+    --cream: #fffaf3;
+    --pink: #ead7dc;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================
+   BIENVENIDA
+========================= */
+
+.welcome {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #40323b 0%,
+            #211a20 45%,
+            #100d11 100%
+        );
+
+    color: white;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+.welcome.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.welcome-content {
+    width: 90%;
+    max-width: 600px;
+    animation: appear 1.5s ease;
+}
+
+.crown {
+    font-size: 60px;
+    color: var(--gold-light);
+    margin-bottom: 20px;
+}
+
+.small-title,
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    font-weight: 500;
+}
+
+.welcome h1 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(45px, 10vw, 85px);
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.welcome h1 span {
+    font-family: "Great Vibes", cursive;
+    color: var(--gold-light);
+    font-size: 1.25em;
+}
+
+.welcome-text {
+    max-width: 430px;
+    margin: 25px auto 35px;
+    line-height: 1.8;
+    font-size: 14px;
+    color: #ded5da;
+}
+
+.enter-btn {
+    border: 1px solid var(--gold);
+    background: transparent;
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 40px;
+
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.enter-btn:hover {
+    background: var(--gold);
+    color: #171318;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    height: 100svh;
+    min-height: 650px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+}
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.25),
+            rgba(0,0,0,.65)
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+.hero-subtitle {
+    font-size: 10px;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(70px, 15vw, 150px);
+    font-weight: 400;
+}
+
+.ornament {
+    font-size: 25px;
+    color: var(--gold-light);
+    margin: 20px 0;
+}
+
+.hero-date {
+    font-family: "Cinzel", serif;
+    letter-spacing: 3px;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    z-index: 3;
+
+    text-align: center;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.arrow {
+    font-size: 20px;
+    margin-top: 8px;
+
+    animation: bounce 1.5s infinite;
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.section {
+    padding: 100px 25px;
+
+    text-align: center;
+
+    max-width: 1000px;
+    margin: auto;
+}
+
+.presentation {
+    background: var(--cream);
+}
+
+.ornament-top {
+    color: var(--gold);
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.section h2 {
+    font-family: "Cinzel", serif;
+    font-weight: 400;
+
+    font-size: clamp(30px, 6vw, 55px);
+
+    line-height: 1.25;
+
+    margin: 20px 0 30px;
+}
+
+.section h2 span {
+    font-family: "Great Vibes", cursive;
+    color: var(--gold);
+    font-size: 1.3em;
+}
+
+.description {
+    max-width: 580px;
+    margin: auto;
+
+    line-height: 2;
+
+    color: #71686d;
+    font-size: 14px;
+}
+
+.crown-decoration {
+    margin-top: 40px;
+    font-size: 45px;
+    color: var(--gold);
+}
+
+
+/* =========================
+   FECHA
+========================= */
+
+.date-section {
+    background: #f4e9e5;
+    max-width: none;
+}
+
+.date-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+
+    margin: 40px auto 25px;
+
+    max-width: 400px;
+}
+
+.date-day {
+    font-family: "Cinzel", serif;
+    font-size: 90px;
+    line-height: 1;
+    color: var(--gold);
+}
+
+.date-info {
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+
+    border-left: 1px solid var(--gold);
+    padding-left: 25px;
+}
+
+.date-info span {
+    font-size: 13px;
+    letter-spacing: 4px;
+}
+
+.date-info strong {
+    font-family: "Cinzel", serif;
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+.time {
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 45px;
+
+    flex-wrap: wrap;
+}
+
+.countdown div {
+    width: 100px;
+    height: 100px;
+
+    border: 1px solid #d7c3c7;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown strong {
+    font-family: "Cinzel", serif;
+    font-size: 28px;
+    font-weight: 400;
+
+    color: var(--gold);
+}
+
+.countdown span {
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   UBICACIÓN
+========================= */
+
+.location-section {
+    background: #211b20;
+    color: white;
+    max-width: none;
+}
+
+.location-icon {
+    font-size: 50px;
+    color: var(--gold-light);
+}
+
+.location-section .description {
+    color: #cfc7cb;
+}
+
+.location-btn,
+.whatsapp-btn {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 15px 30px;
+
+    border: 1px solid var(--gold);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    transition: .3s;
+}
+
+.location-btn:hover,
+.whatsapp-btn:hover {
+    background: var(--gold);
+    color: var(--dark);
+}
+
+
+/* =========================
+   CONFIRMACIÓN
+========================= */
+
+.confirmation {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.confirmation .crown {
+    font-size: 50px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #110e12;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+.footer-crown {
+    color: var(--gold);
+    font-size: 40px;
+}
+
+footer h3 {
+    font-family: "Great Vibes", cursive;
+    font-size: 45px;
+
+    font-weight: 400;
+
+    color: var(--gold-light);
+
+    margin: 15px 0;
+}
+
+footer p {
+    font-size: 12px;
+    color: #aaa;
+}
+
+footer span {
+    display: block;
+    margin-top: 30px;
+    color: var(--gold);
+}
+
+
+/* =========================
+   MÚSICA
+========================= */
+
+.music-btn {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    z-index: 100;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--gold);
+
+    background: rgba(20,15,20,.8);
+
+    color: var(--gold-light);
+
+    cursor: pointer;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes bounce {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .countdown {
+        gap: 8px;
+    }
+
+    .countdown div {
+        width: 78px;
+        height: 85px;
+    }
+
+    .countdown strong {
+        font-size: 23px;
+    }
+
+    .date-day {
+        font-size: 70px;
+    }
+
+    .date-info {
+        padding-left: 18px;
+    }
+
+}
